@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  max-height: 95vh;
+  max-width: 97vw;
+}
+
+.topSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottomSection {
+  display: flex;
+  width: 95%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.bottomSection .right {
+  margin: 10px;
+}
+.bottomSection .left {
+  margin: 10px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: space-around;
+}

@@ -1,0 +1,325 @@
+/* ******************** */
+
+/* HTML El Styling */
+
+/* ******************** */
+legend {
+  display: none;
+}
+
+/* Placeholder styling */
+
+label {
+  display: none;
+}
+
+input {
+  border-bottom: 0.5px solid rgb(201, 201, 201);
+}
+
+input[type="text"]:focus {
+  border-color: #2979ff;
+  box-shadow: 0 0 5px rgba(41, 121, 255, 0.3);
+  outline: none;
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* ******************** */
+
+/* Class Styling */
+
+/* ******************** */
+.container {
+  padding: 15px;
+}
+.caseType {
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.caseType label {
+  display: inline;
+}
+
+.border {
+  border: px solid red;
+}
+
+.card {
+  width: 100px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.card--issue {
+  width: 200px;
+  border-radius: 20px;
+}
+
+#issueInputField {
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#issueInputField::placeholder {
+  font-size: 20px;
+}
+
+.card--issue .issue {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card--issue .issue textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.bottomSection .left {
+  max-width: 25%;
+}
+.bottomSection .middle {
+  max-width: 25%;
+}
+.bottomSection .right {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.bottomSection--bottom {
+  max-height: 1150px;
+}
+
+.inputContainer {
+  position: relative;
+  height: 20px;
+  width: 60px;
+  margin: 0.5rem;
+}
+
+.inputContainer input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Test************** */
+
+.generalCard {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  height: auto;
+}
+
+.generalCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* scrollable div */
+.bottomSection--left__top {
+  margin-bottom: 10px;
+  height: 1150px;
+  width: 100%;
+border: 1px solid grey;
+}
+
+.bottomSection--left__top::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+  background-color: transparent;
+}
+
+.bottomSection--left__top::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.bottomSection--left__top::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.bottomSection--left__top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.bottomSection--left__top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  background-color: #888;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bottomSection--left__top:hover::after {
+  opacity: 1;
+}
+
+.inputContainer input[type="radio"]:checked + label {
+  color: red; /* Example style for the selected radio button label */
+  font-weight: bold; /* Example style for the selected radio button label */
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.productInfoTop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.productInfoTop .productInfoContainer {
+  width: 50px;
+}
+.productInfoBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.productInfoBottom .productInfoContainer {
+  width: 90px;
+}
+.productInfoContainer label {
+  display: inline;
+}
+
+.productInfoContainer {
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 25px;
+  width: 75px;
+}
+
+.productInfoContainer:hover {
+  background-color: #0056b3;
+}
+
+.productInfoContainer input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 2;
+  color: red;
+  opacity: 0;
+}
+
+.productInfoContainer input[type="radio"]:checked + label {
+  color: red; /* Example style for the selected radio button label */
+  font-weight: bold; /* Example style for the selected radio button label */
+}
+
+/* Button Test */
+
+.inputContainer label {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inputContainer input[type="radio"]:checked + label {
+  background-color: #8eeca9;
+  color: #fff;
+}
+
+
+
+.inputContainer label:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.inputContainer label:focus {
+  outline: none;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.inputContainer label:active {
+  animation: buttonAnimation 0.3s ease;
+}
+/* Button  */
+.green-button {
+  background-color: green !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}

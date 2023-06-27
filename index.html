@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Flow</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="javascript:void(0)" class="right">
+        <div class="topSection">
+          <fieldset>
+            <div class="caseType">
+              <div class="inputContainer">
+                <legend>Case</legend>
+
+                <input
+                  name="caseType"
+                  id="new"
+                  type="radio"
+                  value="new"
+                  checked
+                />
+                <label for="new">New</label>
+              </div>
+              <div class="inputContainer">
+                <input
+                  name="caseType"
+                  id="existing"
+                  type="radio"
+                  value="existing"
+                />
+                <label for="existing">Existing</label>
+              </div>
+            </div>
+
+            <div class="generalCard">
+              <legend>Case ID</legend>
+              <input
+                type="text"
+                name="caseId"
+                id="caseId"
+                class="input-placeholder"
+                placeholder="Case ID"
+              />
+              <div class="deviceName">
+                <input
+                  type="text"
+                  name="productName"
+                  class="input-placeholder"
+                  placeholder="Device Name"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="generalCard">
+            <legend>General Information</legend>
+
+            <div class="flex">
+              <label for="name" class="label-placeholder">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="input-placeholder"
+                placeholder="Name"
+                oninput="updateNatoEquivalent(this.value, 'dynamicCard')"
+                onfocus="updateNatoEquivalent(this.value, 'dynamicCard')"
+              />
+            </div>
+
+            <div class="flex">
+              <label for="contactNumber" class="label-placeholder"
+                >Contact Number</label
+              >
+              <input
+                type="text"
+                id="contactNumber"
+                name="contactNumber"
+                class="input-placeholder"
+                placeholder="Contact Number"
+              />
+            </div>
+
+            <div class="flex">
+              <label for="emailAddress" class="label-placeholder"
+                >Email ID</label
+              >
+              <input
+                type="text"
+                name="email"
+                id="emailAddress"
+                class="input-placeholder"
+                placeholder="Email ID"
+                oninput="updateNatoEquivalent(this.value, 'dynamicCard')"
+                onfocus="updateNatoEquivalent(this.value, 'dynamicCard')"
+              />
+            </div>
+
+            <div class="flex">
+              <label for="serialNumber" class="label-placeholder"
+                >Serial Number</label
+              >
+              <input
+                type="text"
+                id="serialNumber"
+                name="serialNumber"
+                class="input-placeholder"
+                placeholder="Serial Number"
+                oninput="updateNatoEquivalent(this.value, 'dynamicCard')"
+                onfocus="updateNatoEquivalent(this.value, 'dynamicCard')"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="generalCard">
+            <legend>Contact Centric info</legend>
+            <div class="flex">
+              <label for="altContactNumber" class="label-placeholder"
+                >Alt. Contact #</label
+              >
+              <input
+                type="text"
+                name="altContactNumber"
+                id="altContactNumber"
+                class="input-placeholder"
+                placeholder="Alt. Contact #"
+              />
+            </div>
+            <div class="flex">
+              <label for="altContactName" class="label-placeholder"
+                >Alt. Contact Name</label
+              >
+              <input
+                type="text"
+                name="altContactName"
+                id="altContactName"
+                class="input-placeholder"
+                placeholder="Alt. Contact Name"
+              />
+            </div>
+
+            <div class="flex">
+              <label for="altEmailId" class="label-placeholder"
+                >Alt. Email ID</label
+              >
+              <input
+                type="text"
+                name="altEmailId"
+                id="altEmailId"
+                class="input-placeholder"
+                placeholder="Alt. Email ID"
+                oninput="updateNatoEquivalent(this.value, 'dynamicCard')"
+                onfocus="updateNatoEquivalent(this.value, 'dynamicCard')"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="card card--issue">
+            <div class="issue">
+              <label for="issueInputField" class="label-placeholder"
+                >Issue</label
+              >
+              <textarea
+                name="issue"
+                id="issueInputField"
+                spellcheck="true"
+                placeholder="Issue Description"
+              ></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="bottomSection generalCard">
+          <div class="left generalCard">
+            <fieldset>
+              <legend>Asset Centric Information</legend>
+
+              <div class="flex">
+                <label for="unitType" class="label-placeholder"
+                  >Unit Type</label
+                >
+                <input
+                  type="text"
+                  name="unitType"
+                  id="unitType"
+                  class="input-placeholder"
+                  placeholder="Unit Type"
+                />
+              </div>
+
+              <div class="flex">
+                <label for="sysLocation" class="label-placeholder"
+                  >System Location</label
+                >
+                <input
+                  type="text"
+                  name="sysLocation"
+                  id="sysLocation"
+                  class="input-placeholder"
+                  placeholder="System Location"
+                />
+              </div>
+
+              <div class="flex">
+                <label for="compName" class="label-placeholder"
+                  >Company Location</label
+                >
+                <input
+                  type="text"
+                  name="compName"
+                  id="compName"
+                  class="input-placeholder"
+                  placeholder="Company Name"
+                    oninput="updateNatoEquivalent(this.value, 'dynamicCard')"
+                onfocus="updateNatoEquivalent(this.value, 'dynamicCard')"
+                />
+              </div>
+
+              <div class="flex">
+                <label for="os" class="label-placeholder">OS</label>
+                <input
+                  type="text"
+                  name="os"
+                  id="os"
+                  class="input-placeholder"
+                  placeholder="OS"
+                />
+              </div>
+
+              <div class="flex">
+                <label for="issueStartDate" class="label-placeholder"
+                  >Issue Start Date</label
+                >
+                <input
+                  type="text"
+                  name="issueStartDate"
+                  id="issueStartDate"
+                  class="input-placeholder"
+                  placeholder="Issue Start Date"
+                />
+              </div>
+            </fieldset>
+          </div>
+          <div class="middle generalCard">
+            <fieldset class="comments">
+              <legend>Comments / Reminder</legend>
+              <label for="comments" class="label-placeholder">Comments</label>
+              <textarea
+                placeholder="comments"
+                name="comments"
+                id="comments"
+              ></textarea>
+            </fieldset>
+            <button type="submit" class="green-button ">SAVE</button>
+          </div>
+
+          <div class="right">
+            <div class="bottomSection--left__top" id="dynamicCard">
+              This will have dynamic content, if any of the filed that requires
+              NATO code conversion then it will show up here. The call script /
+            </div>
+            <!-- <div class="bottomSection--left__bottom generalCard">
+              The Doccument and improtant links will showup here based on the
+              product selected.
+              <p>
+                If there is no case ID, a prompt will show up asking for the
+                case ID, without which the case cannot be saved.
+              </p>
+            </div> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./nato.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
